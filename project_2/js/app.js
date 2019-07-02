@@ -1,7 +1,7 @@
 /*
  * Create a list that holds all of your cards
  */
-var cardTypes = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb', 'fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb'];
+let cardTypes = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb', 'fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb'];
 
 /*
  * Display the cards on the page
@@ -12,7 +12,7 @@ var cardTypes = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-c
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -54,7 +54,7 @@ function setTime() {
   }
   
 function pad(val) {
-    var valString = val + "";
+    let valString = val + "";
     if (valString.length < 2) {
         return "0" + valString;
     } else {
@@ -163,24 +163,10 @@ cards.forEach(card => {
 let restart = document.querySelector('.restart');
 restart.addEventListener('click', () => {
     location.reload();
-    // moves = 0;
-    // movesDisplay.innerHTML = moves;
-
-    // const starScore = document.querySelector('.stars');
-    // starScore.innerHTML = setThreeStars();
-
-    // clearInterval(clockId);
-    // resetTimer();
-    // startGame();
-
-    // // flip all cards down
-    // cards.forEach(card => {
-    //     card.classList.remove('open', 'show', 'match');
-    // });
 });
 
 // Get the modal
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 let playAgainBtn = document.querySelector('.play-again-btn');
 playAgainBtn.addEventListener('click', () => {

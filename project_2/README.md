@@ -2,14 +2,14 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+- [Memory Game Project](#Memory-Game-Project)
+  - [Table of Contents](#Table-of-Contents)
+  - [Instructions](#Instructions)
+  - [Contributing](#Contributing)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
+Open `index.html` to begin playing the memory game. Match all cards as fast as you can without making mistakes! A perfect score of 3 stars is achieved with 10 moves or less. If you complete the game in 16 moves or less, you will score 2 stars. Anything above 16 moves is a score of 1 star.
 
 For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
 
