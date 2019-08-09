@@ -19,10 +19,10 @@ let urlToCache = [
     './js/dbhelper.js',
 
 ];
-self.addEventListener('install', event => {
+self.addEventListener('install', function (event) {
 
     event.waitUntil(
-        caches.open(staticCacheName).then(cache => {
+        caches.open(staticCacheName).then(function (cache) {
             console.log(cache);
             return cache.addAll(urlToCache);
 
@@ -32,14 +32,14 @@ self.addEventListener('install', event => {
     );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', function (event) {
     event.waitUntil(
-        caches.keys().then(cacheNames => {
+        caches.keys().then(function (cacheNames) {
             return Promise.all(
-                cacheNames.filter(cacheName => {
+                cacheNames.filter(function (cacheName) {
                     return cacheName.startsWith('restaurant-') &&
                         cacheName != staticCacheName;
-                }).map(cacheName => {
+                }).map(function (cacheName) {
                     return caches.delete(cacheName);
                 })
             );
@@ -47,9 +47,9 @@ self.addEventListener('activate', event => {
     );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', function (event) {
     event.respondWith(
-        caches.match(event.request).then(response => {
+        caches.match(event.request).then(function (response) {
             return response || fetch(event.request);
         })
     );
