@@ -67,7 +67,6 @@ section {
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  width: 100vw;
 }
 
 #footer {
@@ -152,11 +151,9 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
-  display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: 50px;
   background-color: #3397DB;
   align-items: center;
 }
@@ -323,13 +320,14 @@ label {
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 20px 30px;
+  padding: 10px 20px 80px;
   width: 45%;
 }
 
 #restaurant-container {
   display: flex;
   flex-direction: column;
+  padding-top: 140px;
 }
 
 #reviews-container h2 {
@@ -397,11 +395,10 @@ label {
   .inside {
     display: flex;
     flex-direction: row;
-    width: 100vw
+    width: 100vw;
   }
   .inside header {
     order: 0;
-    width: 100vw;
   }
   header {
     display: flex;
@@ -436,6 +433,7 @@ label {
     width: 100vw;
     padding: 5px;
     margin: auto;
+    padding-bottom: 60px;
   }
   .inside #footer {
     order: 4;
